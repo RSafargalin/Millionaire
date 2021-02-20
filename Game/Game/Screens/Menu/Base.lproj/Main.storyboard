@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="MenuViewController" customModule="Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="MenuView" customModule="Game" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="TrI-dM-Mkk">
+                                <rect key="frame" x="168.5" y="400" width="77" height="96"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VuI-rK-phi">
+                                        <rect key="frame" x="0.0" y="0.0" width="77" height="52"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                        <state key="normal" title="Play!">
+                                            <color key="titleColor" systemColor="systemOrangeColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="QnK-UI-QN2" kind="show" identifier="initGame" id="EY1-sq-zPV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMs-75-0e3">
+                                        <rect key="frame" x="0.0" y="56" width="77" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="Score">
+                                            <color key="titleColor" systemColor="systemOrangeColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="5iU-cm-Akq" kind="show" identifier="score" id="kSB-pD-5bU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who want  to be a millionaire?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAO-BU-2WQ">
+                                <rect key="frame" x="69" y="250" width="276.5" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="2Ku-hB-kcy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TrI-dM-Mkk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1tx-L9-CAr"/>
+                            <constraint firstItem="TrI-dM-Mkk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BoV-To-Xp6"/>
+                            <constraint firstItem="UAO-BU-2WQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MDG-CP-gTo"/>
+                            <constraint firstItem="TrI-dM-Mkk" firstAttribute="top" secondItem="UAO-BU-2WQ" secondAttribute="bottom" constant="60" id="Wb2-qS-sOy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="EpR-xb-qIL" kind="unwind" identifier="menu" unwindAction="unwindSegueToMenu:" id="SSK-yI-f3t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="EpR-xb-qIL" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-71.014492753623188" y="93.75"/>
+        </scene>
+        <!--Game-->
+        <scene sceneID="kH8-66-QXx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Game" id="QnK-UI-QN2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mNL-J8-lSX"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lbi-iI-YcV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="524" y="78"/>
+        </scene>
+        <!--Score-->
+        <scene sceneID="6Sl-fY-lG1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Score" id="5iU-cm-Akq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="m0N-QU-owf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1B7-Ol-i1N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="595" y="111"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
