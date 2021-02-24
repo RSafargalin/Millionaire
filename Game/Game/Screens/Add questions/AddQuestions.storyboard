@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v0n-Rz-v8b">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add question-->
+        <scene sceneID="DJv-E5-MfL">
+            <objects>
+                <viewController id="v0n-Rz-v8b" customClass="AddQuestionsTableViewController" customModule="Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o85-Xk-JQE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dE3-I7-obn">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" systemColor="systemOrangeColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="460" id="OEL-yl-l9F" customClass="AddQuestionCell" customModule="Game" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="460"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OEL-yl-l9F" id="1Mh-1d-o4d">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="460"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="300" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="iLv-dH-2PU" userLabel="Question Stack View">
+                                                    <rect key="frame" x="30" y="21" width="354" height="420"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fill in the question and answer fields:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZN-iu-sdC">
+                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="Ici-cn-zG3"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Question" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YD9-Nw-Gdk" customClass="RSTextField" customModule="Game" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="35" width="354" height="100"/>
+                                                            <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="100" id="XGy-VO-88L"/>
+                                                            </constraints>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer #1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="snr-u3-9rg" customClass="RSTextField" customModule="Game" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="150" width="354" height="35"/>
+                                                            <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="35" id="oXU-dt-ROr"/>
+                                                            </constraints>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer #2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u2E-Br-eq2" customClass="RSTextField" customModule="Game" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="200" width="354" height="35"/>
+                                                            <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="35" id="CQw-iQ-Aj5"/>
+                                                            </constraints>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer #3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L33-e0-XDa" customClass="RSTextField" customModule="Game" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="250" width="354" height="35"/>
+                                                            <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="35" id="zEU-w1-PFT"/>
+                                                            </constraints>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer #4" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jtD-oH-jyb" customClass="RSTextField" customModule="Game" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="300" width="354" height="35"/>
+                                                            <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="35" id="p5m-1c-5QL"/>
+                                                            </constraints>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select correct answer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZO-6p-bss">
+                                                            <rect key="frame" x="0.0" y="350" width="354" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="uMz-tH-KY1"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="gmW-92-BRQ" customClass="RSSegmentedControl" customModule="Game" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="385" width="354" height="36"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="35" id="vgF-R5-PnR"/>
+                                                            </constraints>
+                                                            <segments>
+                                                                <segment title="First"/>
+                                                                <segment title="Second"/>
+                                                                <segment title="The third"/>
+                                                                <segment title="Fourth"/>
+                                                            </segments>
+                                                            <color key="selectedSegmentTintColor" systemColor="systemOrangeColor"/>
+                                                        </segmentedControl>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="420" id="HKI-wF-4AA"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="iLv-dH-2PU" firstAttribute="leading" secondItem="1Mh-1d-o4d" secondAttribute="leadingMargin" constant="10" id="DIu-o2-8w0"/>
+                                                <constraint firstItem="iLv-dH-2PU" firstAttribute="top" secondItem="1Mh-1d-o4d" secondAttribute="topMargin" constant="10" id="Mhw-zo-6ML"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="iLv-dH-2PU" secondAttribute="trailing" constant="10" id="iS0-b0-vXD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="correctAnswerSwitch" destination="gmW-92-BRQ" id="1Dp-9a-5U8"/>
+                                            <outlet property="questionField" destination="YD9-Nw-Gdk" id="jDM-wY-Rek"/>
+                                            <outletCollection property="answers" destination="u2E-Br-eq2" collectionClass="NSMutableArray" id="yxW-Z6-mjy"/>
+                                            <outletCollection property="answers" destination="L33-e0-XDa" collectionClass="NSMutableArray" id="Q6a-Ph-KGd"/>
+                                            <outletCollection property="answers" destination="jtD-oH-jyb" collectionClass="NSMutableArray" id="Kn8-3a-za2"/>
+                                            <outletCollection property="answers" destination="snr-u3-9rg" collectionClass="NSMutableArray" id="Gmp-75-CAe"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8Q-2N-aLa">
+                                <rect key="frame" x="354" y="802" width="50" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycJ-b9-Whb">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addQuestionDidTap:" destination="v0n-Rz-v8b" eventType="touchUpInside" id="8RC-1W-nvs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ycJ-b9-Whb" secondAttribute="trailing" id="8C2-dM-s3E"/>
+                                    <constraint firstAttribute="trailing" secondItem="ycJ-b9-Whb" secondAttribute="trailing" id="A4o-Od-rbA"/>
+                                    <constraint firstAttribute="bottom" secondItem="ycJ-b9-Whb" secondAttribute="bottom" id="AJL-6p-XgX"/>
+                                    <constraint firstAttribute="bottom" secondItem="ycJ-b9-Whb" secondAttribute="bottom" id="GoU-Ju-cMV"/>
+                                    <constraint firstAttribute="height" constant="50" id="IPS-Um-Gj9"/>
+                                    <constraint firstAttribute="width" constant="50" id="WKm-Aa-GvO"/>
+                                    <constraint firstItem="ycJ-b9-Whb" firstAttribute="top" secondItem="d8Q-2N-aLa" secondAttribute="top" id="m20-Vm-sc3"/>
+                                    <constraint firstItem="ycJ-b9-Whb" firstAttribute="leading" secondItem="d8Q-2N-aLa" secondAttribute="leading" id="xHu-5U-dnd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tyr-6b-b1b"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tyr-6b-b1b" firstAttribute="trailing" secondItem="d8Q-2N-aLa" secondAttribute="trailing" constant="10" id="2xM-V1-mkb"/>
+                            <constraint firstItem="dE3-I7-obn" firstAttribute="leading" secondItem="Tyr-6b-b1b" secondAttribute="leading" id="6La-fP-2Pa"/>
+                            <constraint firstItem="Tyr-6b-b1b" firstAttribute="trailing" secondItem="dE3-I7-obn" secondAttribute="trailing" id="Wcd-NF-kfL"/>
+                            <constraint firstItem="Tyr-6b-b1b" firstAttribute="bottom" secondItem="dE3-I7-obn" secondAttribute="bottom" id="hwo-TL-ZFJ"/>
+                            <constraint firstItem="dE3-I7-obn" firstAttribute="top" secondItem="Tyr-6b-b1b" secondAttribute="top" id="jPs-OW-5wS"/>
+                            <constraint firstItem="d8Q-2N-aLa" firstAttribute="bottom" secondItem="Tyr-6b-b1b" secondAttribute="bottom" constant="-10" id="yJd-2b-b3l"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add question" id="3T7-rt-Djl">
+                        <barButtonItem key="leftBarButtonItem" title="Save" id="kxN-Uk-j4c">
+                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                            <connections>
+                                <action selector="saveQuestionsDidTap:" destination="v0n-Rz-v8b" id="U7g-TA-UEd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="addQuestionsButtonContentView" destination="d8Q-2N-aLa" id="6ds-6A-WBy"/>
+                        <outlet property="tableView" destination="dE3-I7-obn" id="HfY-93-2vd"/>
+                        <segue destination="UcZ-pL-WBY" kind="unwind" identifier="backToMenu" unwindAction="unwindToMenu:" id="gto-ZS-yR4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EkL-vG-nvE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="UcZ-pL-WBY" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="581.15942028985512" y="180.80357142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
