@@ -13,17 +13,8 @@ class MenuViewController: UIViewController {
     
     lazy var contentView = view as! MenuView
     
-    // MARK: Life Cycle
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     // MARK: Navigation
-    
-    @IBAction func unwindSegueToMenu(_ segue: UIStoryboardSegue) {
-        
-    }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case Game.Navigation.game:
@@ -32,7 +23,8 @@ class MenuViewController: UIViewController {
             Game.default.gameSession = GameSession()
             controller.delegate = Game.default.gameSession
             
-            Game.default.reloadQuestions(from: .defaults)
+            Game.default.reloadQuestions(from: .users)
+            controller.globalQuestionsCount = Double(Game.default.questions.count)
             let question = Game.default.fetchNextQuestion()
             
             switch question {
@@ -43,9 +35,7 @@ class MenuViewController: UIViewController {
                 break
             }
             
-        case Game.Navigation.score:
-            guard let controller = segue.destination as? ScoreTableViewController else { return }
-            controller.records = Game.default.results
+            navigationController?.setNavigationBarHidden(true, animated: false)
             
         default:
             break

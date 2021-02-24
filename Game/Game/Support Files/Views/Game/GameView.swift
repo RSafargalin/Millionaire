@@ -12,23 +12,20 @@ final class GameView: UIView {
     // MARK: IBOutlets
     
     @IBOutlet weak var question: UILabel!
-    @IBOutlet weak var answerButton1: UIButton!
-    @IBOutlet weak var answerButton2: UIButton!
-    @IBOutlet weak var answerButton3: UIButton!
-    @IBOutlet weak var answerButton4: UIButton!
+    @IBOutlet var answerButtons: [UIButton]!
+    @IBOutlet weak var stats: UILabel!
     
     // MARK: Variables
     
-    var correctAnswer: String?
+    var correctAnswerID: Int?
     
     // MARK: Methods
     
     func setup(_ question: Question) {
         self.question.text = question.question
-        let answers = [answerButton1, answerButton2, answerButton3, answerButton4]
         question.answers.forEach { (answer) in
-            answers[answer.key - 1]?.setTitle(answer.value, for: .normal)
+            answerButtons[answer.key - 1].setTitle(answer.value, for: .normal)
         }
-        correctAnswer = question.answers[question.correctAnswer]
+        correctAnswerID = question.correctAnswer
     }
 }

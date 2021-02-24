@@ -9,7 +9,7 @@ import Foundation
 
 // Создайте структуру Question, содержащую сам вопрос, варианты ответа и правильный ответ.
 
-struct Question {
+struct Question: Codable {
     
     // MARK: Variables
     
@@ -18,4 +18,5 @@ struct Question {
     let answers: [Int:String]
     
     let correctAnswer: Int
+    
 }

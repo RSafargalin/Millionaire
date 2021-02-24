@@ -11,17 +11,17 @@ final class GameSession {
     
     // MARK: Variables
     
-    var correctAnswerCount: Double = 0
-    var questionsCount: Double = 0
-    lazy var winPercentage: Double = correctAnswerCount / questionsCount * 100
+    lazy var winPercentage: Double = correctAnswerCount.value / questionsCount.value * 100
     
+    var questionsCount: Observable<Double> = Observable(0.0)
+    var correctAnswerCount: Observable<Double> = Observable(0.0)
 }
 
 extension GameSession: GameViewDelegate {
     
     func fetchGameStats(answers: Double, questions: Double) {
-        self.correctAnswerCount = answers
-        self.questionsCount = questions
+        self.correctAnswerCount.value = answers
+        self.questionsCount.value = questions
     }
     
 }

@@ -25,8 +25,22 @@
 		FE651C7225E1026900EB7BE9 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE651C7125E1026900EB7BE9 /* ResultView.swift */; };
 		FE651C7625E1164800EB7BE9 /* GameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE651C7525E1164800EB7BE9 /* GameResult.swift */; };
 		FE651C7E25E116CB00EB7BE9 /* GameResultCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE651C7D25E116CB00EB7BE9 /* GameResultCaretaker.swift */; };
-		FE651C8725E11BD000EB7BE9 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE651C8625E11BD000EB7BE9 /* Score.swift */; };
+		FE651C8725E11BD000EB7BE9 /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE651C8625E11BD000EB7BE9 /* ScoreTableViewController.swift */; };
 		FE651C8B25E11BFB00EB7BE9 /* Score.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE651C8A25E11BFB00EB7BE9 /* Score.storyboard */; };
+		FE651C8F25E2863E00EB7BE9 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE651C8E25E2863E00EB7BE9 /* Questions.swift */; };
+		FEC3499525E5820600059B64 /* RSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC3499425E5820600059B64 /* RSTextField.swift */; };
+		FEC3499A25E5857E00059B64 /* AdditionalFieldsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC3499925E5857E00059B64 /* AdditionalFieldsProtocol.swift */; };
+		FEC3499E25E585A800059B64 /* RSTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC3499D25E585A800059B64 /* RSTextView.swift */; };
+		FEC349A125E586DE00059B64 /* QuestionsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC349A025E586DE00059B64 /* QuestionsBuilder.swift */; };
+		FEC349A425E5999400059B64 /* RSSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC349A325E5999400059B64 /* RSSegmentedControl.swift */; };
+		FEC349A825E68F1A00059B64 /* UserQuestionsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC349A725E68F1A00059B64 /* UserQuestionsCaretaker.swift */; };
+		FEE0656225E3E23400C7AA4B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE0656125E3E23400C7AA4B /* SettingsViewController.swift */; };
+		FEE0656625E3E25B00C7AA4B /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE0656525E3E25B00C7AA4B /* Settings.storyboard */; };
+		FEE0656925E3F6A400C7AA4B /* QuestionOrderStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE0656825E3F6A400C7AA4B /* QuestionOrderStrategy.swift */; };
+		FEE0656E25E4027400C7AA4B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE0656D25E4027400C7AA4B /* Observable.swift */; };
+		FEE0657325E5307500C7AA4B /* AddQuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE0657225E5307500C7AA4B /* AddQuestionsTableViewController.swift */; };
+		FEE0657625E530A500C7AA4B /* AddQuestions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE0657525E530A500C7AA4B /* AddQuestions.storyboard */; };
+		FEE0657E25E558F200C7AA4B /* AddQuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE0657D25E558F200C7AA4B /* AddQuestionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,8 +64,22 @@
 		FE651C7125E1026900EB7BE9 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		FE651C7525E1164800EB7BE9 /* GameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResult.swift; sourceTree = "<group>"; };
 		FE651C7D25E116CB00EB7BE9 /* GameResultCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultCaretaker.swift; sourceTree = "<group>"; };
-		FE651C8625E11BD000EB7BE9 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		FE651C8625E11BD000EB7BE9 /* ScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 		FE651C8A25E11BFB00EB7BE9 /* Score.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Score.storyboard; sourceTree = "<group>"; };
+		FE651C8E25E2863E00EB7BE9 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		FEC3499425E5820600059B64 /* RSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSTextField.swift; sourceTree = "<group>"; };
+		FEC3499925E5857E00059B64 /* AdditionalFieldsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalFieldsProtocol.swift; sourceTree = "<group>"; };
+		FEC3499D25E585A800059B64 /* RSTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSTextView.swift; sourceTree = "<group>"; };
+		FEC349A025E586DE00059B64 /* QuestionsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsBuilder.swift; sourceTree = "<group>"; };
+		FEC349A325E5999400059B64 /* RSSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSegmentedControl.swift; sourceTree = "<group>"; };
+		FEC349A725E68F1A00059B64 /* UserQuestionsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserQuestionsCaretaker.swift; sourceTree = "<group>"; };
+		FEE0656125E3E23400C7AA4B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FEE0656525E3E25B00C7AA4B /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		FEE0656825E3F6A400C7AA4B /* QuestionOrderStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionOrderStrategy.swift; sourceTree = "<group>"; };
+		FEE0656D25E4027400C7AA4B /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		FEE0657225E5307500C7AA4B /* AddQuestionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionsTableViewController.swift; sourceTree = "<group>"; };
+		FEE0657525E530A500C7AA4B /* AddQuestions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddQuestions.storyboard; sourceTree = "<group>"; };
+		FEE0657D25E558F200C7AA4B /* AddQuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +155,8 @@
 				FE651C3A25DFEFB900EB7BE9 /* Game */,
 				FE651C6425E010A300EB7BE9 /* Result */,
 				FE651C8525E11BBD00EB7BE9 /* Score */,
+				FEE0656025E3E21700C7AA4B /* Settings */,
+				FEE0657125E5305000C7AA4B /* Add questions */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -143,6 +173,7 @@
 		FE651C4125DFF00A00EB7BE9 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				FEC3499825E5854300059B64 /* Protocols */,
 				FE651C7B25E116AC00EB7BE9 /* Service */,
 				FE651C4925DFF0E400EB7BE9 /* Models */,
 				FE651C4225DFF04500EB7BE9 /* Views */,
@@ -156,6 +187,7 @@
 				FE651C4325DFF04C00EB7BE9 /* Menu */,
 				FE651C5F25DFFBCE00EB7BE9 /* Game */,
 				FE651C6D25E013EC00EB7BE9 /* Result */,
+				FEC3499725E5852B00059B64 /* Redefined */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +215,9 @@
 			isa = PBXGroup;
 			children = (
 				FE651C4B25DFF10E00EB7BE9 /* Question.swift */,
+				FE651C8E25E2863E00EB7BE9 /* Questions.swift */,
+				FEE0656825E3F6A400C7AA4B /* QuestionOrderStrategy.swift */,
+				FEC349A025E586DE00059B64 /* QuestionsBuilder.swift */,
 			);
 			path = Question;
 			sourceTree = "<group>";
@@ -239,26 +274,81 @@
 		FE651C7B25E116AC00EB7BE9 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				FE651C7C25E116B100EB7BE9 /* Game Result Caretaker */,
+				FEE0656C25E4025300C7AA4B /* Observer */,
+				FE651C7C25E116B100EB7BE9 /* Caretakers */,
 			);
 			path = Service;
 			sourceTree = "<group>";
 		};
-		FE651C7C25E116B100EB7BE9 /* Game Result Caretaker */ = {
+		FE651C7C25E116B100EB7BE9 /* Caretakers */ = {
 			isa = PBXGroup;
 			children = (
 				FE651C7D25E116CB00EB7BE9 /* GameResultCaretaker.swift */,
+				FEC349A725E68F1A00059B64 /* UserQuestionsCaretaker.swift */,
 			);
-			path = "Game Result Caretaker";
+			path = Caretakers;
 			sourceTree = "<group>";
 		};
 		FE651C8525E11BBD00EB7BE9 /* Score */ = {
 			isa = PBXGroup;
 			children = (
-				FE651C8625E11BD000EB7BE9 /* Score.swift */,
+				FE651C8625E11BD000EB7BE9 /* ScoreTableViewController.swift */,
 				FE651C8A25E11BFB00EB7BE9 /* Score.storyboard */,
 			);
 			path = Score;
+			sourceTree = "<group>";
+		};
+		FEC3499725E5852B00059B64 /* Redefined */ = {
+			isa = PBXGroup;
+			children = (
+				FEC3499425E5820600059B64 /* RSTextField.swift */,
+				FEC3499D25E585A800059B64 /* RSTextView.swift */,
+				FEC349A325E5999400059B64 /* RSSegmentedControl.swift */,
+			);
+			path = Redefined;
+			sourceTree = "<group>";
+		};
+		FEC3499825E5854300059B64 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FEC3499925E5857E00059B64 /* AdditionalFieldsProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FEE0656025E3E21700C7AA4B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FEE0656125E3E23400C7AA4B /* SettingsViewController.swift */,
+				FEE0656525E3E25B00C7AA4B /* Settings.storyboard */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		FEE0656C25E4025300C7AA4B /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				FEE0656D25E4027400C7AA4B /* Observable.swift */,
+			);
+			path = Observer;
+			sourceTree = "<group>";
+		};
+		FEE0657125E5305000C7AA4B /* Add questions */ = {
+			isa = PBXGroup;
+			children = (
+				FEE0657825E53BFF00C7AA4B /* Cell */,
+				FEE0657225E5307500C7AA4B /* AddQuestionsTableViewController.swift */,
+				FEE0657525E530A500C7AA4B /* AddQuestions.storyboard */,
+			);
+			path = "Add questions";
+			sourceTree = "<group>";
+		};
+		FEE0657825E53BFF00C7AA4B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FEE0657D25E558F200C7AA4B /* AddQuestionCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,10 +410,12 @@
 			files = (
 				FE651C6A25E010C900EB7BE9 /* Result.storyboard in Resources */,
 				FE651C8B25E11BFB00EB7BE9 /* Score.storyboard in Resources */,
+				FEE0657625E530A500C7AA4B /* AddQuestions.storyboard in Resources */,
 				FE651C5125DFF2D300EB7BE9 /* Game.storyboard in Resources */,
 				FE651C2C25DFED9400EB7BE9 /* LaunchScreen.storyboard in Resources */,
 				FE651C2925DFED9400EB7BE9 /* Assets.xcassets in Resources */,
 				FE651C2725DFED9400EB7BE9 /* Main.storyboard in Resources */,
+				FEE0656625E3E25B00C7AA4B /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,19 +426,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE651C8725E11BD000EB7BE9 /* Score.swift in Sources */,
+				FE651C8725E11BD000EB7BE9 /* ScoreTableViewController.swift in Sources */,
 				FE651C4525DFF05F00EB7BE9 /* MenuView.swift in Sources */,
 				FE651C3D25DFEFFF00EB7BE9 /* GameViewController.swift in Sources */,
+				FE651C8F25E2863E00EB7BE9 /* Questions.swift in Sources */,
+				FEE0656E25E4027400C7AA4B /* Observable.swift in Sources */,
 				FE651C7225E1026900EB7BE9 /* ResultView.swift in Sources */,
 				FE651C5B25DFF93800EB7BE9 /* GameSession.swift in Sources */,
 				FE651C5525DFF8CA00EB7BE9 /* Game.swift in Sources */,
+				FEE0656225E3E23400C7AA4B /* SettingsViewController.swift in Sources */,
 				FE651C6125DFFBE200EB7BE9 /* GameView.swift in Sources */,
 				FE651C7625E1164800EB7BE9 /* GameResult.swift in Sources */,
+				FEC349A125E586DE00059B64 /* QuestionsBuilder.swift in Sources */,
+				FEC3499A25E5857E00059B64 /* AdditionalFieldsProtocol.swift in Sources */,
 				FE651C6625E010C000EB7BE9 /* ResultViewController.swift in Sources */,
 				FE651C7E25E116CB00EB7BE9 /* GameResultCaretaker.swift in Sources */,
 				FE651C2425DFED9400EB7BE9 /* MenuViewController.swift in Sources */,
+				FEE0656925E3F6A400C7AA4B /* QuestionOrderStrategy.swift in Sources */,
+				FEE0657325E5307500C7AA4B /* AddQuestionsTableViewController.swift in Sources */,
+				FEE0657E25E558F200C7AA4B /* AddQuestionCell.swift in Sources */,
 				FE651C4C25DFF10E00EB7BE9 /* Question.swift in Sources */,
+				FEC3499525E5820600059B64 /* RSTextField.swift in Sources */,
+				FEC349A425E5999400059B64 /* RSSegmentedControl.swift in Sources */,
 				FE651C2025DFED9400EB7BE9 /* AppDelegate.swift in Sources */,
+				FEC349A825E68F1A00059B64 /* UserQuestionsCaretaker.swift in Sources */,
+				FEC3499E25E585A800059B64 /* RSTextView.swift in Sources */,
 				FE651C2225DFED9400EB7BE9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

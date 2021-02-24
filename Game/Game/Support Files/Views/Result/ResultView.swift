@@ -20,9 +20,9 @@ final class ResultView: UIView {
     
     func setup(result: GameResult) {
         endGameState.text = result.message
-        endGameState.textColor = result.message == "You lose!" ? .red : .green
+        endGameState.textColor = result.isVictory == false ? .red : .green
         questionsCount.text = "Question count: \(String(format: "%0.f", result.questionsCount))"
         answersCount.text = "Answers count: \(String(format: "%0.f", result.correctAnswerCount))"
-        winPercentage.text = "Win percentage: \(result.winPercentage)%"
+        winPercentage.text = "Win percentage: \(result.winPercentage.rounded())%"
     }
 }

@@ -20,6 +20,12 @@ final class Game {
     
     var gameSession: GameSession?
     private let caretaker = GameResultCaretaker()
+    private var dateFormatter: DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .medium
+        return dateFormatter
+    }
     
     typealias WinPercentage = Double
     
@@ -29,44 +35,13 @@ final class Game {
         }
     }
     
-    var questions: [Question] = []
+    var questions: [Question] = [] {
+        didSet {
+            //print("Questions ", questions)
+        }
+    }
     
-    private var defaultsQuestions: [Question] = [
-        Question(question: "В каком году Титаник утонул в Атлантическом океане 15 апреля во время своего первого плавания из Саутгемптона?",
-                 answers: [1 : "1912",
-                           2 : "1911",
-                           3 : "1913",
-                           4 : "1915"],
-                 correctAnswer: 1),
-        
-        Question(question: "Какова продолжительность жизни стрекозы?",
-                 answers: [1 : "28 ч.",
-                           2 : "12 ч.",
-                           3 : "24 ч.",
-                           4 : "48 ч."],
-                 correctAnswer: 3),
-        
-        Question(question: "Дата рождения Николы Тесла?",
-                 answers: [1 : "15 июня 1857",
-                           2 : "10 июля 1856",
-                           3 : "9 августа 1855",
-                           4 : "11 декабря 1856"],
-                 correctAnswer: 2),
-        
-        Question(question: "Дата основания Уфы?",
-                 answers: [1 : "1623 г.",
-                           2 : "1582 г.",
-                           3 : "1720 г.",
-                           4 : "1574 г."],
-                 correctAnswer: 4),
-        
-        Question(question: "Дата основания Праги?",
-                 answers: [1 : "VIII век",
-                           2 : "VII век",
-                           3 : "IV век ",
-                           4 : "VI век"],
-                 correctAnswer: 1)
-    ]
+    var strategy: QuestionOrderStrategy = QuestionsInDirectOrder()
     
     // MARK: Enums
     
@@ -74,34 +49,35 @@ final class Game {
         static let menu = "backToMenu",
                    game = "initGame",
                    result = "goToResult",
-                   score = "score"
+                   score = "score",
+                   settings = "settings",
+                   addQuestion = "addQuestion"
     }
     
     enum GameErrors: Error {
         case questionsAreOver
     }
     
-    enum Questions {
+    enum QuestionsType {
         case defaults,
-             new([Question]?)
+             new([Question]?),
+             users
     }
     
     // MARK: Methods
-    
-    func addResult(message: String) -> GameResult {
+
+    func addResult(state: GameViewController.GameEndState) -> GameResult {
+        
         let result = GameResult()
-        result.questionsCount = gameSession?.questionsCount ?? 0
-        result.correctAnswerCount = gameSession?.correctAnswerCount ?? 0
+        result.questionsCount = gameSession?.questionsCount.value ?? 0
+        result.correctAnswerCount = gameSession?.correctAnswerCount.value ?? 0
         result.winPercentage = gameSession?.winPercentage ?? 0
         
-        let currentDate = Date()
-        let dateFormatter = DateFormatter()
-
-        dateFormatter.dateFormat = "dd/MM/yyyy hh:mm:ss a"
-        let date: String = dateFormatter.string(from: currentDate)
-        
+        let date: String = dateFormatter.string(from: Date())
         result.date = date
-        result.message = message
+        
+        result.isVictory = state == .victory ? true : false
+        
         results.append(result)
         return result
     }
@@ -114,18 +90,29 @@ final class Game {
         }
     }
     
-    func reloadQuestions(from questions: Questions) {
-        switch questions {
+    func reloadQuestions(from questionsType: QuestionsType) {
+        switch questionsType {
         case .defaults:
-            self.questions = defaultsQuestions
+            self.questions = Questions().defaults
             
         case .new(let questions):
             guard let questions = questions, !questions.isEmpty
             else {
-                self.questions = defaultsQuestions
+                self.questions = Questions().defaults
                 return
             }
             self.questions = questions
+            
+        case .users:
+            let userQuestitons = Questions().userQuestions
+            guard !userQuestitons.isEmpty
+            else {
+                self.questions = Questions().defaults
+                return
+            }
+            self.questions = userQuestitons + Questions().defaults
         }
+        
+        questions = self.strategy.getQuestions()
     }
 }

@@ -13,10 +13,11 @@ final class ResultViewController: UIViewController {
     
     lazy var contentView = view as! ResultView
     
-    // MARK: Life Cycle
+    // MARK: IBActions
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func backToMenuDidTap(_ sender: UIButton) {
+        guard let navigationController = navigationController else { return }
+        navigationController.popToRootViewController(animated: true)
+        navigationController.setNavigationBarHidden(false, animated: true)
     }
-    
 }

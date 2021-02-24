@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7G3-1M-0c9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -13,14 +13,14 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="MenuViewController" customModule="Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="MenuView" customModule="Game" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="TrI-dM-Mkk">
-                                <rect key="frame" x="168.5" y="400" width="77" height="96"/>
+                                <rect key="frame" x="141" y="334" width="132" height="140"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VuI-rK-phi">
-                                        <rect key="frame" x="0.0" y="0.0" width="77" height="52"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="132" height="52"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
                                         <state key="normal" title="Play!">
                                             <color key="titleColor" systemColor="systemOrangeColor"/>
@@ -30,19 +30,29 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMs-75-0e3">
-                                        <rect key="frame" x="0.0" y="56" width="77" height="40"/>
+                                        <rect key="frame" x="0.0" y="56" width="132" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <state key="normal" title="Score">
                                             <color key="titleColor" systemColor="systemOrangeColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="5iU-cm-Akq" kind="show" identifier="score" id="kSB-pD-5bU"/>
+                                            <segue destination="5iU-cm-Akq" kind="presentation" identifier="score" id="kSB-pD-5bU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ng4-Ld-DrS">
+                                        <rect key="frame" x="0.0" y="100" width="132" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="Add question">
+                                            <color key="titleColor" systemColor="systemOrangeColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="0sO-7u-xHr" kind="show" identifier="addQuestion" id="fSH-n0-DX7"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who want  to be a millionaire?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAO-BU-2WQ">
-                                <rect key="frame" x="69" y="250" width="276.5" height="90"/>
+                                <rect key="frame" x="69" y="184" width="276.5" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="2Ku-hB-kcy"/>
                                 </constraints>
@@ -60,24 +70,40 @@
                             <constraint firstItem="TrI-dM-Mkk" firstAttribute="top" secondItem="UAO-BU-2WQ" secondAttribute="bottom" constant="60" id="Wb2-qS-sOy"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <segue destination="EpR-xb-qIL" kind="unwind" identifier="menu" unwindAction="unwindSegueToMenu:" id="SSK-yI-f3t"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="f72-pE-wZc">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="baD-Ag-nOe">
+                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" id="D5e-c0-Bei">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="See-sZ-Ujo">
+                                <rect key="frame" x="368" y="9.5" width="26" height="25.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" image="gearshape" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
+                                <connections>
+                                    <segue destination="iag-nD-2Hg" kind="show" identifier="settings" id="ohM-4e-siK">
+                                        <segue key="commit" inheritsFrom="parent" id="oJm-Ab-zWa"/>
+                                        <segue key="preview" inheritsFrom="commit" id="iSk-QW-A99"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="EpR-xb-qIL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-71.014492753623188" y="93.75"/>
+            <point key="canvasLocation" x="839.13043478260875" y="93.75"/>
         </scene>
         <!--Game-->
         <scene sceneID="kH8-66-QXx">
             <objects>
-                <viewControllerPlaceholder storyboardName="Game" id="QnK-UI-QN2" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="mNL-J8-lSX"/>
-                </viewControllerPlaceholder>
+                <viewControllerPlaceholder storyboardName="Game" id="QnK-UI-QN2" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbi-iI-YcV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="524" y="78"/>
+            <point key="canvasLocation" x="1504" y="79"/>
         </scene>
         <!--Score-->
         <scene sceneID="6Sl-fY-lG1">
@@ -87,10 +113,65 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1B7-Ol-i1N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="595" y="111"/>
+            <point key="canvasLocation" x="1504" y="112"/>
+        </scene>
+        <!--AddQuestions-->
+        <scene sceneID="USq-X3-HLx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddQuestions" id="0sO-7u-xHr" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Add questions" id="vGq-1c-MnS">
+                        <barButtonItem key="backBarButtonItem" title="Saves" id="JEH-9g-ViA"/>
+                    </navigationItem>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rC6-M6-Egn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1542" y="143"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="aUc-3y-rTZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="iag-nD-2Hg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Settings" id="7pQ-x5-TGI">
+                        <barButtonItem key="backBarButtonItem" title="Menu" id="PUt-gn-7h5">
+                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3mf-EM-R23" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1517" y="44"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9X9-Uv-aMm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7G3-1M-0c9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" alpha="0.69999999999999996" contentMode="scaleToFill" translucent="NO" id="kzf-L3-J6r">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="systemOrangeColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Wu2-rt-FTk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OUj-pa-ba0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-71.014492753623188" y="93.75"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ohM-4e-siK"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -61,7 +61,7 @@
                                             <color key="titleColor" systemColor="systemOrangeColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="VbU-4d-HWw" kind="unwind" identifier="backToMenu" unwindAction="unwindSegueToMenu:" id="4rT-rJ-Sqn"/>
+                                            <action selector="backToMenuDidTap:" destination="9Ea-LE-ck8" eventType="touchUpInside" id="faP-hW-A2O"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -84,7 +84,6 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LK3-QA-JQx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="VbU-4d-HWw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="72" y="88"/>
         </scene>

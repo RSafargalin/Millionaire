@@ -19,6 +19,7 @@ class GameViewController: UIViewController {
     
     private var correctAnswerCount: Double = 0
     private var questionsCount: Double = 0
+    var globalQuestionsCount: Double = 1
     
     var delegate: GameViewDelegate?
     
@@ -29,7 +30,7 @@ class GameViewController: UIViewController {
              wrong
     }
     
-    private enum GameEndState {
+    enum GameEndState {
         case victory,
              defeat
     }
@@ -38,14 +39,15 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        connectGameStatsObserver()
     }
+    
     // MARK: IBAction
     
     @IBAction private func answerButtonsTap(_ sender: UIButton) {
-        guard let currentAnswer = sender.currentTitle,
-              let correctAnswer = contentView.correctAnswer else { return }
+        guard let correctAnswerID = contentView.correctAnswerID else { return }
         
-        if currentAnswer == correctAnswer {
+        if sender.tag == correctAnswerID {
             playerAnswered(.correctly)
             
             let question = Game.default.fetchNextQuestion()
@@ -65,6 +67,19 @@ class GameViewController: UIViewController {
     
     // MARK: Methods
     
+    private func connectGameStatsObserver() {
+        let stats = contentView.stats
+        Game.default.gameSession?.questionsCount.addObserver(stats!,
+                                                             options: [.initial, .new],
+                                                             closure:
+        { [weak self] (value, change) in
+            let correctAnswerCount = Game.default.gameSession?.correctAnswerCount.value ?? 0.0
+            let gameProgress = correctAnswerCount / (self?.globalQuestionsCount ?? 1.0) * 100
+            
+            stats?.text = "Question: \(Int(value) + 1) \nGame progress: \(gameProgress.rounded())%"
+        })
+    }
+    
     private func playerAnswered(_ answer: PossibleAnswer) {
         switch answer {
         case .correctly:
@@ -78,16 +93,8 @@ class GameViewController: UIViewController {
     }
     
     private func endGame(_ state: GameEndState) {
-        var sender = ""
-        
-        switch state {
-        case .victory:
-            sender = "You win!"
-            
-        case .defeat:
-            sender = "You lose!"
-        }
-        let result = Game.default.addResult(message: sender)
+        let result = Game.default.addResult(state: state)
+        Game.default.gameSession = nil
         performSegue(withIdentifier: Game.Navigation.result, sender: result)
     }
     
@@ -99,9 +106,7 @@ class GameViewController: UIViewController {
             guard let controller = segue.destination as? ResultViewController,
                   let result = sender as? GameResult
             else { return }
-            
             controller.contentView.setup(result: result)
-            Game.default.gameSession = nil
                     
         default:
             break

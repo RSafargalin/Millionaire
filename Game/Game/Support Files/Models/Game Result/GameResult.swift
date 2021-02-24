@@ -14,5 +14,10 @@ final class GameResult: Codable {
     var correctAnswerCount: Double = 0
     var questionsCount: Double = 0
     var winPercentage: Double = 0
-    var message: String = ""
+    var message: String {
+        get {
+            return isVictory == false ? "You lose!" : "You win!"
+        }
+    }
+    var isVictory: Bool = false
 }
